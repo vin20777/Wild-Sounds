@@ -9,20 +9,22 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     var body: some View {
         NavigationView {
             ZStack {
-                Color(.orange)
+                Color(white: 20/255)
                     .edgesIgnoringSafeArea(.all)
                 VStack {
-                    Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                    Spacer()
+                    Text("Good afternoon, Tsao. \n You have 1 credit to spend.")
                         .foregroundColor(.white)
                     Spacer()
                 }
-                .padding()
-                .navigationTitle("Audible")
             }
+            .navigationBarTitle("audible", displayMode: .inline)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
