@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		832BAE3825D67901007C9441 /* AnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832BAE3725D67900007C9441 /* AnimalView.swift */; };
 		83CE1FD425D4D56500CA57A8 /* WildSoundsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CE1FD325D4D56500CA57A8 /* WildSoundsApp.swift */; };
 		83CE1FD825D4D56700CA57A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83CE1FD725D4D56700CA57A8 /* Assets.xcassets */; };
 		83CE1FDB25D4D56700CA57A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83CE1FDA25D4D56700CA57A8 /* Preview Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		832BAE3725D67900007C9441 /* AnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalView.swift; sourceTree = "<group>"; };
 		83CE1FD025D4D56500CA57A8 /* WildSounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WildSounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CE1FD325D4D56500CA57A8 /* WildSoundsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildSoundsApp.swift; sourceTree = "<group>"; };
 		83CE1FD725D4D56700CA57A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		832BAE3A25D67A00007C9441 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				832BAE3725D67900007C9441 /* AnimalView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		83AF5A0925D64351001B51D4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +80,7 @@
 		83AF5A0E25D643D4001B51D4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				832BAE3A25D67A00007C9441 /* View */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832BAE3825D67901007C9441 /* AnimalView.swift in Sources */,
 				83CE1FE425D4D58400CA57A8 /* HomeView.swift in Sources */,
 				83CE1FD425D4D56500CA57A8 /* WildSoundsApp.swift in Sources */,
 				83EAC23225D5D23C00A34164 /* SoundView.swift in Sources */,

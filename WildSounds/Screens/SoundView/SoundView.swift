@@ -24,10 +24,8 @@ struct SoundView: View {
                 Text("dd")
                     .font(.headline)
                 Text("ee")
-                Text("ff")
-                Text("gg")
             }
-            .frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: .top)
+            .frame(height: 100, alignment: .top)
             Spacer()
         }
     }

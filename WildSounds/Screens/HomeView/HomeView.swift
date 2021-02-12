@@ -10,6 +10,7 @@ import SwiftUI
 
 struct HomeView: View {
     
+    // TODO: Move to view model
     let rows: [GridItem] = [GridItem(.flexible())]
     
     var body: some View {
@@ -34,28 +35,17 @@ struct HomeView: View {
                                 .padding(15.0)
                             Spacer()
                         }
-                        ScrollView(.horizontal) {
-                            LazyHGrid(rows: rows) {
-                                Text("PICTURE1")
-                                    .font(.title)
-                                    .foregroundColor(.white)
-                                Text("PICTURE2")
-                                    .font(.headline)
-                                    .foregroundColor(.white)
-                                Text("PICTURE3")
-                                    .font(.largeTitle)
-                                    .foregroundColor(.white)
-                                Text("PICTURE4")
-                                    .font(.body)
-                                    .foregroundColor(.white)
-                                Text("PICTURE5")
-                                    .font(.subheadline)
-                                    .foregroundColor(.white)
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            LazyHGrid(rows: rows, spacing: 15.0) {
+                                AnimalView(name: "Dolphin", imageName: "dolphin", habitat: "Ocean")
+                                AnimalView(name: "Elephant", imageName: "elephant", habitat: "grassland")
+                                AnimalView(name: "Cat", imageName: "cat", habitat: "city")
+                                AnimalView(name: "Lion", imageName: "lion", habitat: "grassland")
+                                AnimalView(name: "Snake", imageName: "snake", habitat: "forest")
                             }
-                            .frame(height: 160, alignment: .top)
+                            .frame(height: 200, alignment: .top)
                             .padding(.leading, 15)
                             .padding(.trailing, 15)
-                            Spacer()
                         }
                         Spacer()
                     }
@@ -63,7 +53,7 @@ struct HomeView: View {
                     Spacer()
                 }
             }
-            .navigationBarTitle("audible", displayMode: .inline)
+            .navigationBarTitle("Wild Sounds", displayMode: .inline)
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
