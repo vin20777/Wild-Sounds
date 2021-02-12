@@ -35,6 +35,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83AF5A0925D64351001B51D4 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				83AF5A0C25D64381001B51D4 /* SoundView */,
+				83AF5A0B25D64372001B51D4 /* HomeView */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		83AF5A0B25D64372001B51D4 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				83CE1FE325D4D58400CA57A8 /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		83AF5A0C25D64381001B51D4 /* SoundView */ = {
+			isa = PBXGroup;
+			children = (
+				83EAC23125D5D23C00A34164 /* SoundView.swift */,
+			);
+			path = SoundView;
+			sourceTree = "<group>";
+		};
+		83AF5A0D25D643B3001B51D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		83AF5A0E25D643D4001B51D4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		83AF5A0F25D64425001B51D4 /* UIKit Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "UIKit Components";
+			sourceTree = "<group>";
+		};
 		83CE1FC725D4D56400CA57A8 = {
 			isa = PBXGroup;
 			children = (
@@ -54,9 +100,11 @@
 		83CE1FD225D4D56500CA57A8 /* WildSounds */ = {
 			isa = PBXGroup;
 			children = (
+				83AF5A0F25D64425001B51D4 /* UIKit Components */,
+				83AF5A0D25D643B3001B51D4 /* Models */,
+				83AF5A0E25D643D4001B51D4 /* Views */,
+				83AF5A0925D64351001B51D4 /* Screens */,
 				83CE1FD325D4D56500CA57A8 /* WildSoundsApp.swift */,
-				83CE1FE325D4D58400CA57A8 /* HomeView.swift */,
-				83EAC23125D5D23C00A34164 /* SoundView.swift */,
 				83CE1FD725D4D56700CA57A8 /* Assets.xcassets */,
 				83CE1FDC25D4D56700CA57A8 /* Info.plist */,
 				83CE1FD925D4D56700CA57A8 /* Preview Content */,
