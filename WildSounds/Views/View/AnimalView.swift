@@ -10,47 +10,51 @@ import SwiftUI
 
 struct AnimalView: View {
     
-    let name: String
-    let imageName: String
-    let habitat: String
+    let wiki: Wiki
     
     var body: some View {
         VStack {
-            Image(imageName)
+            Image(wiki.imageName)
                 .resizable()
                 .frame(width: 100, height: 100)
-                // TODO: Put some random gradients
-                .background(Color.red)
+                .background(generateRandomGradient())
             HStack {
-                Text(name)
+                Text(wiki.name)
                     .font(.system(size: 20, weight: .bold, design: .default))
                     .foregroundColor(.white)
                 Spacer()
             }
             HStack {
-                Text("@\(habitat)")
+                Text("@\(wiki.habit)")
                     .font(.system(size: 18, weight: .bold, design: .default))
                     .foregroundColor(.gray)
                 Spacer()
             }
-            HStack {
-                // TODO: Use the @Binding for show or hide
-                Text("INCLUDED")
-                    .frame(width: 90, height: 30, alignment: .center)
-                    .font(.system(size: 16, weight: .medium, design: .default))
-                    .foregroundColor(.black)
-                    .background(Color.orange)
-                    .cornerRadius(5.0)
-                Spacer()
+            if wiki.requiredMember {
+                HStack {
+                    Text("INCLUDED")
+                        .frame(width: 90, height: 30, alignment: .center)
+                        .font(.system(size: 16, weight: .medium, design: .default))
+                        .foregroundColor(.black)
+                        .background(Color.orange)
+                        .cornerRadius(5.0)
+                    Spacer()
+                }
+                .padding(.top, 2.0)
             }
-            .padding(.top, 2.0)
+            Spacer()
         }
+    }
+    
+    private func generateRandomGradient() -> LinearGradient {
+        let colorsPool: [Color] = [.red, .green, .white, .orange, .blue, .black, .pink, .purple, .yellow]
+        return LinearGradient(gradient: Gradient(colors: [colorsPool.randomElement()!, colorsPool.randomElement()!]), startPoint: .topLeading, endPoint: .bottomTrailing)
     }
 }
 
 struct AnimalView_Previews: PreviewProvider {
     static var previews: some View {
-        AnimalView(name: "Snake", imageName: "snake", habitat: "forest")
+        AnimalView(wiki: MockData.wikis[4])
             .preferredColorScheme(.dark)
     }
 }

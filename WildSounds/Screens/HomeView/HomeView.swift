@@ -37,11 +37,9 @@ struct HomeView: View {
                         }
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHGrid(rows: rows, spacing: 15.0) {
-                                AnimalView(name: "Dolphin", imageName: "dolphin", habitat: "Ocean")
-                                AnimalView(name: "Elephant", imageName: "elephant", habitat: "grassland")
-                                AnimalView(name: "Cat", imageName: "cat", habitat: "city")
-                                AnimalView(name: "Lion", imageName: "lion", habitat: "grassland")
-                                AnimalView(name: "Snake", imageName: "snake", habitat: "forest")
+                                ForEach(MockData.wikis) { wiki in
+                                    AnimalView(wiki: wiki)
+                                }
                             }
                             .frame(height: 200, alignment: .top)
                             .padding(.leading, 15)
