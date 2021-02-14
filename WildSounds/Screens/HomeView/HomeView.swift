@@ -24,7 +24,7 @@ struct HomeView: View {
                         VStack {
                             TitleView(title: viewModel.welcomeText)
                             GalleryView(hasPremiumMembership: $viewModel.hasPremiumMembership, title: "Listen more like XXX sound", wikis: viewModel.mockData)
-                            GalleryView(hasPremiumMembership: $viewModel.hasPremiumMembership, title: "Enjoy the ennvironment vibe", wikis: viewModel.mockData)
+                            GalleryView(hasPremiumMembership: $viewModel.hasPremiumMembership, title: "Enjoy the ennvironment vibe", wikis: viewModel.mockData.reversed())
                             Spacer(minLength: 30)
                             WideButton(description: "Switch between Premium and Regular", systemImageName: "switch.2", action: {
                                 // Toggle your membership and change UI accordingly

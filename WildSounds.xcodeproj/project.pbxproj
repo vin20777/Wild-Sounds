@@ -12,6 +12,11 @@
 		8319671525D8AB6500BE4CB2 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319671425D8AB6500BE4CB2 /* MockData.swift */; };
 		8319671825D8AC7400BE4CB2 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319671725D8AC7400BE4CB2 /* GalleryView.swift */; };
 		832BAE3825D67901007C9441 /* AnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832BAE3725D67900007C9441 /* AnimalView.swift */; };
+		8351254925D9D3E400EA2D7D /* elephant.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8351254425D9D3E300EA2D7D /* elephant.mp3 */; };
+		8351254A25D9D3E400EA2D7D /* lion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8351254525D9D3E300EA2D7D /* lion.mp3 */; };
+		8351254B25D9D3E400EA2D7D /* dolphin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8351254625D9D3E300EA2D7D /* dolphin.mp3 */; };
+		8351254C25D9D3E400EA2D7D /* snake.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8351254725D9D3E300EA2D7D /* snake.mp3 */; };
+		8351254D25D9D3E400EA2D7D /* cat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8351254825D9D3E400EA2D7D /* cat.mp3 */; };
 		838EA92825D7CB9C00D0117A /* Wiki.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838EA92725D7CB9C00D0117A /* Wiki.swift */; };
 		838EA92C25D7CD6700D0117A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838EA92B25D7CD6700D0117A /* HomeViewModel.swift */; };
 		83CE1FD425D4D56500CA57A8 /* WildSoundsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CE1FD325D4D56500CA57A8 /* WildSoundsApp.swift */; };
@@ -27,6 +32,11 @@
 		8319671425D8AB6500BE4CB2 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		8319671725D8AC7400BE4CB2 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		832BAE3725D67900007C9441 /* AnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalView.swift; sourceTree = "<group>"; };
+		8351254425D9D3E300EA2D7D /* elephant.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = elephant.mp3; sourceTree = "<group>"; };
+		8351254525D9D3E300EA2D7D /* lion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lion.mp3; sourceTree = "<group>"; };
+		8351254625D9D3E300EA2D7D /* dolphin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dolphin.mp3; sourceTree = "<group>"; };
+		8351254725D9D3E300EA2D7D /* snake.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = snake.mp3; sourceTree = "<group>"; };
+		8351254825D9D3E400EA2D7D /* cat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cat.mp3; sourceTree = "<group>"; };
 		838EA92725D7CB9C00D0117A /* Wiki.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wiki.swift; sourceTree = "<group>"; };
 		838EA92B25D7CD6700D0117A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		83CE1FD025D4D56500CA57A8 /* WildSounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WildSounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +92,18 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8351254325D9D3A700EA2D7D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8351254825D9D3E400EA2D7D /* cat.mp3 */,
+				8351254625D9D3E300EA2D7D /* dolphin.mp3 */,
+				8351254425D9D3E300EA2D7D /* elephant.mp3 */,
+				8351254525D9D3E300EA2D7D /* lion.mp3 */,
+				8351254725D9D3E300EA2D7D /* snake.mp3 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		83AF5A0925D64351001B51D4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +141,7 @@
 		83AF5A0E25D643D4001B51D4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				83AF5A0F25D64425001B51D4 /* UIKit Components */,
 				8300ECB925D92AE300F296E1 /* Text */,
 				8300ECB725D9204200F296E1 /* Button */,
 				832BAE3A25D67A00007C9441 /* View */,
@@ -152,15 +175,15 @@
 		83CE1FD225D4D56500CA57A8 /* WildSounds */ = {
 			isa = PBXGroup;
 			children = (
-				83AF5A0F25D64425001B51D4 /* UIKit Components */,
 				83AF5A0D25D643B3001B51D4 /* Models */,
 				83AF5A0E25D643D4001B51D4 /* Views */,
 				83AF5A0925D64351001B51D4 /* Screens */,
 				8319671325D8AB3A00BE4CB2 /* Services */,
+				8351254325D9D3A700EA2D7D /* Resources */,
+				83CE1FD925D4D56700CA57A8 /* Preview Content */,
 				83CE1FD325D4D56500CA57A8 /* WildSoundsApp.swift */,
 				83CE1FD725D4D56700CA57A8 /* Assets.xcassets */,
 				83CE1FDC25D4D56700CA57A8 /* Info.plist */,
-				83CE1FD925D4D56700CA57A8 /* Preview Content */,
 			);
 			path = WildSounds;
 			sourceTree = "<group>";
@@ -231,6 +254,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8351254A25D9D3E400EA2D7D /* lion.mp3 in Resources */,
+				8351254C25D9D3E400EA2D7D /* snake.mp3 in Resources */,
+				8351254B25D9D3E400EA2D7D /* dolphin.mp3 in Resources */,
+				8351254925D9D3E400EA2D7D /* elephant.mp3 in Resources */,
+				8351254D25D9D3E400EA2D7D /* cat.mp3 in Resources */,
 				83CE1FDB25D4D56700CA57A8 /* Preview Assets.xcassets in Resources */,
 				83CE1FD825D4D56700CA57A8 /* Assets.xcassets in Resources */,
 			);
