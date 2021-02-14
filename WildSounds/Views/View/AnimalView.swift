@@ -37,8 +37,8 @@ struct AnimalView: View {
                     Text(hasPremiumMembership ? "INCLUDED": "PREMIUM")
                         .frame(width: 90, height: 30, alignment: .center)
                         .font(.system(size: 16, weight: .medium, design: .default))
-                        .foregroundColor(.black)
-                        .background(Color.orange)
+                        .foregroundColor(hasPremiumMembership ? .black: .white)
+                        .background(hasPremiumMembership ? Color.orange: Color.red)
                         .cornerRadius(5.0)
                     Spacer()
                 }

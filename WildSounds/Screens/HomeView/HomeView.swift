@@ -22,7 +22,7 @@ struct HomeView: View {
                 ScrollView(.vertical) {
                     HStack {
                         VStack {
-                            TitleView(title: viewModel.hasPremiumMembership ? "Good afternoon, USER.\nYou have 1 credit to spend.": "Join premium by pressing the button at the bottom.")
+                            TitleView(title: viewModel.welcomeText)
                             GalleryView(hasPremiumMembership: $viewModel.hasPremiumMembership, title: "Listen more like XXX sound", wikis: viewModel.mockData)
                             GalleryView(hasPremiumMembership: $viewModel.hasPremiumMembership, title: "Enjoy the ennvironment vibe", wikis: viewModel.mockData)
                             Spacer(minLength: 30)
