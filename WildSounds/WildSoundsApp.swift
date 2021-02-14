@@ -10,9 +10,12 @@ import SwiftUI
 
 @main
 struct WildSoundsApp: App {
+    
+    let homeTitle = "Wild Sounds"
+    
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            HomeView(title: homeTitle)
         }
     }
 }

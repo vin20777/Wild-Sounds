@@ -10,6 +10,8 @@ import SwiftUI
 
 struct AnimalView: View {
     
+    @Binding var hasPremiumMembership: Bool
+    
     let wiki: Wiki
     
     var body: some View {
@@ -32,7 +34,7 @@ struct AnimalView: View {
             }
             if wiki.requiredMember {
                 HStack {
-                    Text("INCLUDED")
+                    Text(hasPremiumMembership ? "INCLUDED": "PREMIUM")
                         .frame(width: 90, height: 30, alignment: .center)
                         .font(.system(size: 16, weight: .medium, design: .default))
                         .foregroundColor(.black)
@@ -54,7 +56,7 @@ struct AnimalView: View {
 
 struct AnimalView_Previews: PreviewProvider {
     static var previews: some View {
-        AnimalView(wiki: MockData.wikis[4])
+        AnimalView(hasPremiumMembership: .constant(true), wiki: MockData.wikis[4])
             .preferredColorScheme(.dark)
     }
 }

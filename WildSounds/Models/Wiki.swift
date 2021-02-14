@@ -10,7 +10,6 @@ import Foundation
 
 struct Wiki: Hashable, Identifiable {
     let id = UUID()
-    
     let name: String
     let imageName: String
     let habit: String
@@ -22,14 +21,4 @@ struct Wiki: Hashable, Identifiable {
         self.habit = habit
         self.requiredMember = requiredMember
     }
-}
-
-struct MockData {
-    static let wikis = [
-        Wiki("Dolphin", "dolphin", "Ocean"),
-        Wiki("Elephant", "elephant", "grassland", true),
-        Wiki("Cat", "cat", "city"),
-        Wiki("Lion", "lion", "grassland", true),
-        Wiki("Snake", "snake", "forest", true)
-    ]
 }

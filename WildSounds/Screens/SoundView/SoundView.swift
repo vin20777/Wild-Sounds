@@ -10,29 +10,16 @@ import SwiftUI
 
 struct SoundView: View {
     
-    let rows: [GridItem] = [GridItem(.flexible())]
+    let wiki: Wiki
     
     var body: some View {
-        ScrollView(.horizontal) {
-            LazyHGrid(rows: rows) {
-                Text("aa")
-                    .font(.title)
-                Text("bb")
-                    .font(.headline)
-                Text("cc")
-                    .font(.headline)
-                Text("dd")
-                    .font(.headline)
-                Text("ee")
-            }
-            .frame(height: 100, alignment: .top)
-            Spacer()
-        }
+        Text(wiki.name)
+            .font(.largeTitle)
     }
 }
 
 struct SoundView_Previews: PreviewProvider {
     static var previews: some View {
-        SoundView()
+        SoundView(wiki: MockData.wikis[1])
     }
 }

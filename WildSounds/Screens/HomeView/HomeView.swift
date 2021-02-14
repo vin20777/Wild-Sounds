@@ -10,45 +10,30 @@ import SwiftUI
 
 struct HomeView: View {
     
-    // TODO: Move to view model
-    let rows: [GridItem] = [GridItem(.flexible())]
+    @StateObject var viewModel = HomeViewModel()
+    
+    var title: String
     
     var body: some View {
         NavigationView {
             ZStack {
-                Color(white: 20/255)
+                Color("classic")
                     .edgesIgnoringSafeArea(.all)
-                HStack {
-                    VStack {
-                        Text("Good afternoon, USER.\nYou have 1 credit to spend.")
-                            .font(.system(size: 28, weight: .bold, design: .default))
-                            .lineSpacing(5.0)
-                            .foregroundColor(.white)
-                            .multilineTextAlignment(.leading)
-                            .padding(.top, 30.0)
-                        HStack {
-                            Text("Listen more like XXX sound")
-                                .font(.system(size: 25, weight: .bold, design: .default))
-                                .lineSpacing(5.0)
-                                .foregroundColor(.white)
-                                .multilineTextAlignment(.leading)
-                                .padding(15.0)
-                            Spacer()
-                        }
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            LazyHGrid(rows: rows, spacing: 15.0) {
-                                ForEach(MockData.wikis) { wiki in
-                                    AnimalView(wiki: wiki)
-                                }
-                            }
-                            .frame(height: 200, alignment: .top)
-                            .padding(.leading, 15)
-                            .padding(.trailing, 15)
+                ScrollView(.vertical) {
+                    HStack {
+                        VStack {
+                            TitleView(title: viewModel.hasPremiumMembership ? "Good afternoon, USER.\nYou have 1 credit to spend.": "Join premium by pressing the button at the bottom.")
+                            GalleryView(hasPremiumMembership: $viewModel.hasPremiumMembership, title: "Listen more like XXX sound", wikis: viewModel.mockData)
+                            GalleryView(hasPremiumMembership: $viewModel.hasPremiumMembership, title: "Enjoy the ennvironment vibe", wikis: viewModel.mockData)
+                            Spacer(minLength: 30)
+                            WideButton(description: "Switch between Premium and Regular", systemImageName: "switch.2", action: {
+                                // Toggle your membership and change UI accordingly
+                                viewModel.hasPremiumMembership = !viewModel.hasPremiumMembership
+                            })
+                            Spacer(minLength: 30)
                         }
                         Spacer()
                     }
-                    .padding(.leading, 10)
-                    Spacer()
                 }
             }
             .navigationBarTitle("Wild Sounds", displayMode: .inline)
@@ -59,6 +44,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(title: "Good Morning")
     }
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8300ECB525D9203C00F296E1 /* WideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8300ECB425D9203C00F296E1 /* WideButton.swift */; };
+		8300ECBB25D92AFC00F296E1 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8300ECBA25D92AFC00F296E1 /* TitleView.swift */; };
+		8319671525D8AB6500BE4CB2 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319671425D8AB6500BE4CB2 /* MockData.swift */; };
+		8319671825D8AC7400BE4CB2 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8319671725D8AC7400BE4CB2 /* GalleryView.swift */; };
 		832BAE3825D67901007C9441 /* AnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832BAE3725D67900007C9441 /* AnimalView.swift */; };
 		838EA92825D7CB9C00D0117A /* Wiki.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838EA92725D7CB9C00D0117A /* Wiki.swift */; };
 		838EA92C25D7CD6700D0117A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838EA92B25D7CD6700D0117A /* HomeViewModel.swift */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8300ECB425D9203C00F296E1 /* WideButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WideButton.swift; sourceTree = "<group>"; };
+		8300ECBA25D92AFC00F296E1 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		8319671425D8AB6500BE4CB2 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		8319671725D8AC7400BE4CB2 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		832BAE3725D67900007C9441 /* AnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalView.swift; sourceTree = "<group>"; };
 		838EA92725D7CB9C00D0117A /* Wiki.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wiki.swift; sourceTree = "<group>"; };
 		838EA92B25D7CD6700D0117A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -41,10 +49,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8300ECB725D9204200F296E1 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				8300ECB425D9203C00F296E1 /* WideButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		8300ECB925D92AE300F296E1 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				8300ECBA25D92AFC00F296E1 /* TitleView.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		8319671325D8AB3A00BE4CB2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8319671425D8AB6500BE4CB2 /* MockData.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		832BAE3A25D67A00007C9441 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				832BAE3725D67900007C9441 /* AnimalView.swift */,
+				8319671725D8AC7400BE4CB2 /* GalleryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -86,6 +119,8 @@
 		83AF5A0E25D643D4001B51D4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8300ECB925D92AE300F296E1 /* Text */,
+				8300ECB725D9204200F296E1 /* Button */,
 				832BAE3A25D67A00007C9441 /* View */,
 			);
 			path = Views;
@@ -121,6 +156,7 @@
 				83AF5A0D25D643B3001B51D4 /* Models */,
 				83AF5A0E25D643D4001B51D4 /* Views */,
 				83AF5A0925D64351001B51D4 /* Screens */,
+				8319671325D8AB3A00BE4CB2 /* Services */,
 				83CE1FD325D4D56500CA57A8 /* WildSoundsApp.swift */,
 				83CE1FD725D4D56700CA57A8 /* Assets.xcassets */,
 				83CE1FDC25D4D56700CA57A8 /* Info.plist */,
@@ -212,7 +248,11 @@
 				838EA92825D7CB9C00D0117A /* Wiki.swift in Sources */,
 				83CE1FE425D4D58400CA57A8 /* HomeView.swift in Sources */,
 				83CE1FD425D4D56500CA57A8 /* WildSoundsApp.swift in Sources */,
+				8319671525D8AB6500BE4CB2 /* MockData.swift in Sources */,
 				83EAC23225D5D23C00A34164 /* SoundView.swift in Sources */,
+				8300ECB525D9203C00F296E1 /* WideButton.swift in Sources */,
+				8319671825D8AC7400BE4CB2 /* GalleryView.swift in Sources */,
+				8300ECBB25D92AFC00F296E1 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +381,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 210214;
 				DEVELOPMENT_ASSET_PATHS = "\"WildSounds/Preview Content\"";
 				DEVELOPMENT_TEAM = 8T79SY5AA9;
 				ENABLE_PREVIEWS = YES;
@@ -350,7 +391,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vtstudio.ios.WildSounds;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vtstudio.ios.wildsounds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -363,6 +405,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 210214;
 				DEVELOPMENT_ASSET_PATHS = "\"WildSounds/Preview Content\"";
 				DEVELOPMENT_TEAM = 8T79SY5AA9;
 				ENABLE_PREVIEWS = YES;
@@ -372,7 +415,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vtstudio.ios.WildSounds;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vtstudio.ios.wildsounds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
