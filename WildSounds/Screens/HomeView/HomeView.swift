@@ -12,7 +12,7 @@ struct HomeView: View {
     
     @StateObject var viewModel = HomeViewModel()
     
-    var title: String
+    var navTitle: String
     
     var body: some View {
         NavigationView {
@@ -36,7 +36,7 @@ struct HomeView: View {
                     }
                 }
             }
-            .navigationBarTitle("Wild Sounds", displayMode: .inline)
+            .navigationBarTitle(navTitle, displayMode: .inline)
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
@@ -44,6 +44,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(title: "Good Morning")
+        HomeView(navTitle: "Good Morning")
     }
 }

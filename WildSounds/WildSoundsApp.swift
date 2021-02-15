@@ -15,7 +15,7 @@ struct WildSoundsApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomeView(title: homeTitle)
+            HomeView(navTitle: homeTitle)
         }
     }
 }
