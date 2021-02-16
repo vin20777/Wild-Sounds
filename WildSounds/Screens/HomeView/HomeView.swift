@@ -17,7 +17,7 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color("classic")
+                Color.classic
                     .edgesIgnoringSafeArea(.all)
                 ScrollView(.vertical) {
                     HStack {
@@ -39,6 +39,7 @@ struct HomeView: View {
             .navigationBarTitle(navTitle, displayMode: .inline)
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        .accentColor(.classic)
     }
 }
 

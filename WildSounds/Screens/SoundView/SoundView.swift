@@ -18,7 +18,7 @@ struct SoundView: View {
     var body: some View {
         VStack(spacing: 0) {
             ZStack {
-                Color("classic")
+                Color.classic
                     .edgesIgnoringSafeArea(.all)
                 VStack {
                     Image(wiki.imageName)
@@ -31,7 +31,7 @@ struct SoundView: View {
                 .padding(EdgeInsets(top: 30, leading: 60, bottom: 0, trailing: 60))
             }
             ZStack {
-                Color("darkGray")
+                Color.darkGray
                     .edgesIgnoringSafeArea(.all)
                     .padding(0.0)
                 VStack(spacing: 0.0) {

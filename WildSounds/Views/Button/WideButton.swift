@@ -34,7 +34,7 @@ struct WideButton: View {
                     .frame(width: 10, height: 18)
             }
             .padding(EdgeInsets(top: 20, leading: 15, bottom: 20, trailing: 15))
-            .background(Color("grayBlue"))
+            .background(Color.grayBlue)
             .foregroundColor(.white)
             .cornerRadius(10.0)
         }
